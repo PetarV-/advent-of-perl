@@ -23,9 +23,9 @@ for (my $i = 0; $i < @digits; $i++) {
     }
 }
 
-print("The captcha solution is ", $ret, "\n");
+print("The captcha solution is $ret\n");
 
-my $gap = @digits / 2;
+my $gap = @digits >> 1;
 
 $ret = 0;
 
@@ -35,6 +35,6 @@ for (my $i = 0; $i < @digits; $i++) {
     }
 }
 
-print("The new captcha solution is ", $ret, "\n");
+print("The new captcha solution is $ret\n");
 
 close($fh);

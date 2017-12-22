@@ -21,7 +21,7 @@ while (my $line = <$fh>) {
     $ret += $max - $min;
 }
 
-print("The spreadsheet checksum is ", $ret, "\n");
+print("The spreadsheet checksum is $ret\n");
 
 # Seek back to beginning of file
 seek($fh, 0, 0);
@@ -45,6 +45,6 @@ while (my $line = <$fh>) {
     }
 }
 
-print("The sum of each row's result is ", $ret, "\n");
+print("The sum of each row's result is $ret\n");
 
 close($fh);
