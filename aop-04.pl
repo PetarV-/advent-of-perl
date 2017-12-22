@@ -11,7 +11,7 @@ my $ret = 0;
 
 while (my $line = <$fh>) {
     # Match a regular expression (=~), extracting words (\w+), globally (g)
-    my @row = $line =~ /(\w+)/g;
+    my @row = $line =~ /(\S+)/g;
     # Check for duplicates via a hash table
     my $ok = 1;
     my %mark;
@@ -31,7 +31,7 @@ $ret = 0;
 
 while (my $line = <$fh>) {
     # Match a regular expression (=~), extracting words (\w+), globally (g)
-    my @row = $line =~ /(\w+)/g;
+    my @row = $line =~ /(\S+)/g;
     # Check for duplicates via a hash table
     my $ok = 1;
     my %mark;
@@ -45,6 +45,5 @@ while (my $line = <$fh>) {
 }
 
 print("Under the new policy, the number of valid passphrases is $ret\n");
-
 
 close($fh);
