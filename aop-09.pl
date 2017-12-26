@@ -26,7 +26,7 @@ local $/ = undef;
 
 print("The total score is $ret\n");
 
-# Seek back to beginnign of file
+# Seek back to beginning of file
 seek($fh, 0, 0);
 
 $ret = 0;

@@ -10,7 +10,7 @@ open(my $fh, '<', $fname)
 my $ret = 0;
 
 while (my $line = <$fh>) {
-    # Match a regular expression (=~), extracting words (\w+), globally (g)
+    # Match a regular expression (=~), extracting word tokens (\S+), globally (g)
     my @row = $line =~ /(\S+)/g;
     # Check for duplicates via a hash table
     my $ok = 1;
@@ -30,7 +30,7 @@ seek($fh, 0, 0);
 $ret = 0;
 
 while (my $line = <$fh>) {
-    # Match a regular expression (=~), extracting words (\w+), globally (g)
+    # Match a regular expression (=~), extracting word tokens (\S+), globally (g)
     my @row = $line =~ /(\S+)/g;
     # Check for duplicates via a hash table
     my $ok = 1;
