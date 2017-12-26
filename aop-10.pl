@@ -81,7 +81,6 @@ for (my $i = 0; $i < 16; $i++) {
     for (my $j = 0; $j < 16; $j++) {
         $xor ^= $seq[$i * 16 + $j];
     }
-#    print("Value: $xor\n");
     printf("%02lx", $xor);
 }
 
